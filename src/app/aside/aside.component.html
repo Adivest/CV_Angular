@@ -1,0 +1,53 @@
+<div class="container">
+  <ng-container *ngIf="isDisplayed === true">
+    <div class="show-message">
+      <p class="message">Hello!This is my CV!</p>
+    </div>
+  </ng-container>
+  <div class="center">
+    <figure class="image is-64x64">
+      <img [src]="image" alt="" class="is-rounded" />
+    </figure>
+  </div>
+  <div class="center">
+    <h3 class="title">{{ name }}</h3>
+  </div>
+  <div class="line"></div>
+  <div class="center">
+    <h6>{{ job }}</h6>
+  </div>
+  <section class="section">
+    <div class="block">
+      <h6 class="subtitle">Details</h6>
+      <p>{{ town }}</p>
+      <p>{{ phoneNumber }}</p>
+      <p>{{ email }}</p>
+    </div>
+    <div class="block">
+      <h6 class="subtitle">Links</h6>
+      <a [href]="portofolioLink" target="_blank">Portofolio</a>
+    </div>
+    <div class="block">
+      <h6 class="subtitle">Skills</h6>
+      <p>HTML 5</p>
+      <progress class="progress is-primary is-small" value="100">100%</progress>
+      <p>CSS 3</p>
+      <progress class="progress is-primary is-small" value="80" max="100">
+        80%
+      </progress>
+      <p>Javascript</p>
+      <progress class="progress is-primary is-small" value="75" max="100">
+        75%
+      </progress>
+      <p>Angular</p>
+      <progress class="progress is-primary is-small" value="50" max="100">
+        50%
+      </progress>
+      <p>React</p>
+      <progress class="progress is-primary is-small" value="50" max="100">
+        50%
+      </progress>
+      <button class="button is-primary" (click)="onClick()">Hello</button>
+    </div>
+  </section>
+</div>
